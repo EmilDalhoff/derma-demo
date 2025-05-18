@@ -51,7 +51,7 @@ export default function InfoSection() {
           <div className="md:w-1/2">
             <div className=" overflow-hidden">
               <Image
-                src="/Molecyle.svg"
+                src="/Molecyle.png"
                 alt="IL-13 molecules visualization"
                 width={300}
                 height={200}

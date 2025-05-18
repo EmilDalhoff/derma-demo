@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function DoctorSection() {
   return (
-    <section className="py-10 sm:py-16 bg-white">
+    <section className=" sm:py-16 bg-white">
       <div className="container mx-auto sm:px-6">
         {/* Section Title */}
         <h2 className="text-2xl sm:text-3xl flex justify-center md:justify-start text-blue-600 font-light mb-8">
@@ -17,7 +17,7 @@ export default function DoctorSection() {
           <div className="w-full md:w-1/2 bg-gray-100 px-4 md:px-0 mb-6 md:mb-0">
             <div className="h-48 sm:h-64 relative overflow-hidden ">
               <Image
-                src="/Nurse.svg"
+                src="/Nurse.png"
                 alt="Healthcare Professional"
                 layout="fill"
                 objectFit="cover"
@@ -40,7 +40,7 @@ export default function DoctorSection() {
           <div className="w-full md:w-1/2 bg-gray-100 px-4 md:px-0 ">
             <div className="h-48 sm:h-64 relative overflow-hidden">
               <Image
-                src="/Needle.svg"
+                src="/Needle.png"
                 alt="Injection demonstration"
                 layout="fill"
                 objectFit="cover"
