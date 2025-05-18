@@ -20,7 +20,6 @@ export default function Testimonials() {
       id: "video-1",
       title: "Efficacy in Moderate-to-Severe AD",
       description: "Dr. Johnson discusses the clinical efficacy of Adtralza in treating moderate-to-severe atopic dermatitis patients.",
-      thumbnail: "/video-thumbnail-placeholder.jpg",
       duration: "4:26",
       doctor: {
         name: "Dr. Sarah Johnson",
@@ -32,7 +31,6 @@ export default function Testimonials() {
       id: "video-2",
       title: "Safety Profile & Patient Selection",
       description: "An overview of Adtralza's safety profile and identifying appropriate candidates for treatment.",
-      thumbnail: "/video-thumbnail-placeholder.jpg",
       duration: "3:15",
       doctor: {
         name: "Dr. Michael Chen",
@@ -44,7 +42,6 @@ export default function Testimonials() {
       id: "video-3",
       title: "Long-term Management with Adtralza",
       description: "Discussion on the benefits of Adtralza in long-term atopic dermatitis management strategies.",
-      thumbnail: "/video-thumbnail-placeholder.jpg",
       duration: "5:08",
       doctor: {
         name: "Dr. Maria Rodriguez",
@@ -56,7 +53,6 @@ export default function Testimonials() {
       id: "video-4",
       title: "Patient Quality of Life Improvements",
       description: "Real-world observations on quality of life improvements for patients using Adtralza.",
-      thumbnail: "/video-thumbnail-placeholder.jpg",
       duration: "3:42",
       doctor: {
         name: "Dr. Thomas Wilson",
@@ -95,7 +91,6 @@ export default function Testimonials() {
                 videoId={activeVideo}
                 title={videos.find(v => v.id === activeVideo)?.title || ""}
                 description={videos.find(v => v.id === activeVideo)?.description}
-                thumbnailUrl={videos.find(v => v.id === activeVideo)?.thumbnail}
               />
               <div className="mt-4 text-center">
                 <button 
@@ -123,13 +118,8 @@ export default function Testimonials() {
               role="listitem"
             >
               <div className="w-1/3 relative">
-                <div className="h-full relative flex items-center justify-center bg-gray-200">
-                  <img 
-                    src={video.thumbnail} 
-                    alt="" 
-                    className="absolute inset-0 w-full h-full object-cover"
-                    aria-hidden="true"
-                  />
+                <div className="h-full relative flex items-center justify-center bg-gray-300">
+                  {/* Removed img tag and just using the gray background */}
                   <button 
                     className="w-12 h-12 rounded-full bg-pink-500 hover:bg-pink-600 flex items-center justify-center z-10 transition-transform duration-200 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent"
                     aria-label={`Play video: ${video.title}`}

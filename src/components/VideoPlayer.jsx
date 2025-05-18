@@ -6,7 +6,6 @@ export default function VideoPlayer({
   videoId, 
   title, 
   description,
-  thumbnailUrl = '/video-thumbnail-placeholder.jpg' 
 }) {
   // State management with modern hooks
   const [isPlaying, setIsPlaying] = useState(false);
@@ -103,13 +102,10 @@ export default function VideoPlayer({
     <div className="relative bg-gray-100 rounded-lg overflow-hidden shadow-lg">
      
       {!isPlaying && (
-        <div className="relative aspect-video">
-          <img 
-            src={thumbnailUrl} 
-            alt={`Thumbnail for ${title}`} 
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-20">
+        <div className="relative aspect-video bg-gray-300">
+          
+          <div className="absolute inset-0 flex flex-col items-center justify-center">
+            <h4 className="text-gray-600 font-medium mb-4">{title}</h4>
             <button
               onClick={togglePlay}
               className="bg-accent hover:bg-opacity-90 text-white rounded-full w-16 h-16 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 transition-all duration-200"
