@@ -5,15 +5,15 @@ export default function DoctorSection() {
   return (
     <section className=" sm:py-16 bg-white">
       <div className="container mx-auto sm:px-6">
-        {/* Section Title */}
+        
         <h2 className="text-2xl sm:text-3xl flex justify-center md:justify-start text-blue-600 font-light mb-8">
           Clinical tools - at a glance
         </h2>
         
-        {/* Two Column Layout */}
+       
         <div className="flex flex-col md:flex-row md:space-x-6">
           
-          {/* First Column - Nurse */}
+          
           <div className="w-full md:w-1/2 bg-gray-100 px-4 md:px-0 mb-6 md:mb-0">
             <div className="h-48 sm:h-64 relative overflow-hidden ">
               <Image
@@ -36,7 +36,7 @@ export default function DoctorSection() {
             </div>
           </div>
           
-          {/* Second Column - Needle */}
+          
           <div className="w-full md:w-1/2 bg-gray-100 px-4 md:px-0 ">
             <div className="h-48 sm:h-64 relative overflow-hidden">
               <Image

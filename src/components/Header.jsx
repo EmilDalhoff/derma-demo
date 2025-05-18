@@ -81,9 +81,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm">
       <div className="container mx-auto px-4 py-2">
-        {/* Main navigation */}
         <div className="flex justify-between items-center">
-          {/* Logo */}
           <div className="logo">
             <Link href="/" className="flex items-center">
               <Image 
@@ -123,7 +121,6 @@ export default function Header() {
           </button>
         </div>
         
-        {/* First navigation level - desktop */}
         <nav className="hidden md:flex space-x-8 mt-2">
           {navItems.map((item) => (
             <button
@@ -138,11 +135,9 @@ export default function Header() {
           ))}
         </nav>
         
-        {/* Mobile navigation menu */}
         {isMenuOpen && (
           <div className="md:hidden bg-white mt-4 border-t border-gray-200">
             <div className="py-2">
-              {/* Mobile search */}
               <div className="relative px-4 py-3">
                 <input 
                   type="text" 
@@ -156,7 +151,6 @@ export default function Header() {
                 </button>
               </div>
               
-              {/* Mobile main nav */}
               <nav className="space-y-1">
                 {navItems.map((item) => (
                   <div key={item.name}>
@@ -174,7 +168,6 @@ export default function Header() {
                       )}
                     </button>
                     
-                    {/* Mobile secondary nav */}
                     {activeMainNav === item.name && item.treatments.length > 0 && (
                       <div className="bg-gray-100">
                         {item.treatments.map((treatment) => (
@@ -193,7 +186,6 @@ export default function Header() {
                               )}
                             </button>
                             
-                            {/* Mobile tertiary nav */}
                             {activeSecondaryNav === treatment && treatmentDetails[treatment] && (
                               <div className="bg-primary text-white">
                                 {treatmentDetails[treatment].map((detail) => (
@@ -221,7 +213,6 @@ export default function Header() {
         )}
       </div>
       
-      {/* Second navigation level - treatments (desktop) */}
       {activeMainNav && (
         <div className="hidden md:block bg-gray-100">
           <div className="container mx-auto px-4 py-2">
